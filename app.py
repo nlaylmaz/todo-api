@@ -7,7 +7,8 @@ def home():
     return jsonify({
         "tasks": [
             "Docker ogren",
-            "CI/CD ogren"
+            "CI/CD ogren",
+	    "Azure deploy ogren"
         ]
     })
 
