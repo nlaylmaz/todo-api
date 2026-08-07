@@ -24,3 +24,15 @@ jobs:
 
       - name: Docker image push
         run: docker push nlaplmaz/todo-api:${{ github.sha }}
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Azure Container App'i guncelle
+        run: |
+          az containerapp update \
+            --name todo-api-nly \
+            --resource-group todo-api-rg \
+            --image nlaplmaz/todo-api:${{ github.sha }}
