@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Testleri calistir
-        run: pytest
+        run: pytest --cov=app --cov-report=term-missing
 
       - name: Docker Hub Login
         uses: docker/login-action@v3
