@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     return jsonify({
-        "tasks": [
+        "liste": [
             "Docker ogren",
             "CI/CD ogren",
 	    "Azure deploy ogren"
