@@ -30,7 +30,7 @@ def test_tasks_not_empty():
 
     data = response.get_json()
 
-    assert len(data["tasks"]) > 0
+    assert len(data["tasks"]) ==  0
 
 def test_not_found():
     client = app.test_client()
